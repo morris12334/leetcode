@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace leetcode.solution._2020April
+namespace leetcode.solution
 {
     class Q201
     {

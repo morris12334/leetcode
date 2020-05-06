@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace leetcode.solution._2020April
+namespace leetcode.solution
 {
     //https://leetcode.com/explore/other/card/30-day-leetcoding-challenge/528/week-1/3284/
     class Q202

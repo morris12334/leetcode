@@ -1,5 +1,4 @@
 ﻿using leetcode.solution;
-using leetcode.solution._2020April;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +12,7 @@ namespace leetcode
             Solution leetcode = new Solution();
             while (exitCode == "")
             {
-                Console.WriteLine("輸入空白離開");
+                Console.WriteLine("輸入exit離開");
                 string cmdtxt = Console.ReadLine();
                 string str, ans;
                 string[] strs;
@@ -141,6 +140,7 @@ namespace leetcode
                         num = new Q560().SubarraySum(nums, num);
                         Console.WriteLine("return = " + num);
                         break;
+                    case "exit":
                     case "e":
                         exitCode = "exit";
                         break;

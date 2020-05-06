@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace leetcode.solution._2020April
+namespace leetcode.solution
 {
     class Q221
     {
