@@ -66,6 +66,13 @@ namespace leetcode
                         num = new Q136().SingleNumber(nums);
                         Console.WriteLine("return = " + num);
                         break;
+                    case "169"://https://leetcode.com/problems/majority-element/
+                        Console.WriteLine("169. Majority Element");
+                        strs = Console.ReadLine().Split(',');
+                        nums = Array.ConvertAll(strs, int.Parse);
+                        num = new Q169().MajorityElement(nums);
+                        Console.WriteLine("return = " + num);
+                        break;
                     case "201"://https://leetcode.com/problems/bitwise-and-of-numbers-range/
                     case "3308"://https://leetcode.com/explore/other/card/30-day-leetcoding-challenge/531/week-4/3308/
                         Console.WriteLine("201. Bitwise AND of Numbers Range");

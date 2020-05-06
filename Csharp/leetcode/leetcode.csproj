@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="solution\Q169.cs" />
     <Compile Include="solution\Q387.cs" />
     <Compile Include="solution\Q221.cs" />
     <Compile Include="solution\Q202.cs" />
