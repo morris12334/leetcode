@@ -34,8 +34,8 @@ public class Leetcode {
 			String exitCode = "";
 
 			while (exitCode == "") {
-				System.out.print("輸入exit離開");
-				
+				System.out.println("輸入exit離開");
+
 				String cmdtxt = cmdList.take();
 
 				String str, ans;
@@ -45,17 +45,36 @@ public class Leetcode {
 				boolean bol;
 
 				switch (cmdtxt) {
-				case "Q26":
-					System.out.println("26. Remove Duplicates from Sorted Array");
-					strs = cmdList.take().split(",");
-					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
-					num = new Q26().removeDuplicates(nums);
-					System.out.println("return = "+num);
-
 				case "exit":
 				case "e":
 					exitCode = "exit";
 					break;
+					
+				case "26":
+					System.out.println("26. Remove Duplicates from Sorted Array");
+					strs = cmdList.take().split(",");
+					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
+					num = new Q26().removeDuplicates(nums);
+					System.out.println("return = " + num);
+					break;
+
+				case "122":
+					System.out.println("122. Best Time to Buy and Sell Stock II");
+					strs = cmdList.take().split(",");
+					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
+					num = new Q122().maxProfit(nums);
+					System.out.println("return = " + num);
+					break;
+					
+				case "189":
+					System.out.println("189. Rotate Array");
+					strs = cmdList.take().split(",");
+					num = Integer.valueOf(cmdList.take());
+					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
+					Q189 q189 = new Q189(nums, num);
+					System.out.println("return = " + Arrays.toString(q189.outputArr));
+					break;
+					
 				}
 			}
 		} catch (Exception e) {
