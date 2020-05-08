@@ -58,6 +58,7 @@
     <Compile Include="solution\Q1138.cs" />
     <Compile Include="solution\Q349.cs" />
     <Compile Include="solution\Q476.cs" />
+    <Compile Include="solution\Q993.cs" />
     <Compile Include="Soultion.cs" />
   </ItemGroup>
   <ItemGroup>

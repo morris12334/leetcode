@@ -4,7 +4,10 @@ namespace leetcode.solution
 {
     class Q124
     {
-        public Q124(string[] strs) { TreeNode BTree = new Q104(strs).BTree; }
+        public Q124(string[] strs) {
+            TreeNode BTree = new Q104(strs).BTree;
+            maxPathSum = MaxPathSum(BTree);
+        }
 
         public int maxPathSum = int.MinValue;
         public int MaxPathSum(TreeNode root)
