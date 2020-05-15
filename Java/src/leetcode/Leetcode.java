@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-
 import solution.*;
 
 public class Leetcode {
@@ -112,6 +111,14 @@ public class Leetcode {
 					numsArr[1] = new int[] { 1, 1, 0 };
 					numsArr[2] = new int[] { 1, 0, 1 };
 					numsArr = new Q733().floodFill(numsArr, num1, num2, num);
+					System.out.println("return = " + num);
+					break;
+
+				case "918":
+					System.out.println("918. Maximum Sum Circular Subarray");
+					strs = cmdList.take().split(",");
+					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
+					num = new Q918().maxSubarraySumCircular(nums);
 					System.out.println("return = " + num);
 					break;
 
