@@ -2,7 +2,6 @@ package leetcode;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -75,6 +74,16 @@ public class Leetcode {
 					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
 					Q189 q189 = new Q189(nums, num);
 					System.out.println("return = " + Arrays.toString(q189.outputArr));
+					break;
+
+				case "208":
+					System.out.println("208. Implement Trie (Prefix Tree)");
+					str = cmdList.take();
+					Q208 obj = new Q208();
+					obj.insert(str);
+					boolean param_2 = obj.search(str);
+					boolean param_3 = obj.startsWith(str);
+					System.out.println("return = " + str + " " + param_2 + " " + param_3);
 					break;
 
 				case "402":
