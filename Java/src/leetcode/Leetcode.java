@@ -37,7 +37,7 @@ public class Leetcode {
 
 				String cmdtxt = cmdList.take();
 
-				String str, ans;
+				String str1, str2, ans;
 				int num, num1, num2;
 				int[] nums, nums1, nums2;
 				int[][] numsArr;
@@ -77,20 +77,28 @@ public class Leetcode {
 
 				case "208":
 					System.out.println("208. Implement Trie (Prefix Tree)");
-					str = cmdList.take();
+					str1 = cmdList.take();
 					Q208 obj = new Q208();
-					obj.insert(str);
-					boolean param_2 = obj.search(str);
-					boolean param_3 = obj.startsWith(str);
-					System.out.println("return = " + str + " " + param_2 + " " + param_3);
+					obj.insert(str1);
+					boolean param_2 = obj.search(str1);
+					boolean param_3 = obj.startsWith(str1);
+					System.out.println("return = " + str1 + " " + param_2 + " " + param_3);
 					break;
 
 				case "402":
 					System.out.println("402. Remove K Digits");
-					str = cmdList.take();
+					str1 = cmdList.take();
 					num = Integer.valueOf(cmdList.take());
-					str = new Q402().removeKdigits(str, num);
-					System.out.println("return = " + str);
+					str1 = new Q402().removeKdigits(str1, num);
+					System.out.println("return = " + str1);
+					break;
+
+				case "438":
+					System.out.println("438. Find All Anagrams in a String");
+					str1 = cmdList.take();
+					str2 = cmdList.take();
+					Q438 q438 = new Q438(str1, str2);
+					System.out.println("return = " + Arrays.toString(q438.outputList.toArray()));
 					break;
 
 				case "540":
@@ -99,6 +107,14 @@ public class Leetcode {
 					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
 					num = new Q540().singleNonDuplicate(nums);
 					System.out.println("return = " + num);
+					break;
+
+				case "567":
+					System.out.println("567. Permutation in String");
+					str1 = cmdList.take();
+					str2 = cmdList.take();
+					bol = new Q567().checkInclusion(str1, str2);
+					System.out.println("return = " + bol);
 					break;
 
 				case "733":
@@ -134,7 +150,7 @@ public class Leetcode {
 					break;
 				}
 			} catch (Exception e) {
-				System.out.print(e.fillInStackTrace());
+				System.out.println(e.fillInStackTrace());
 			}
 		}
 
