@@ -85,6 +85,13 @@ public class Leetcode {
 					System.out.println("return = " + str1 + " " + param_2 + " " + param_3);
 					break;
 
+				case "338":
+					System.out.println("338. Counting Bits");
+					num = Integer.valueOf(cmdList.take());
+					nums = new Q338().countBits(num);
+					System.out.println("return = " + Arrays.toString(nums));
+					break;
+
 				case "402":
 					System.out.println("402. Remove K Digits");
 					str1 = cmdList.take();
@@ -101,20 +108,19 @@ public class Leetcode {
 					System.out.println("return = " + Arrays.toString(q438.outputList.toArray()));
 					break;
 
+				case "525":
+					System.out.println("525. Contiguous Array");
+					nums = Arrays.stream(cmdList.take().split(",")).mapToInt(Integer::parseInt).toArray();
+					num = new Q525().findMaxLength(nums);
+					System.out.println("return = " + num);
+					break;
+
 				case "540":
 					System.out.println("540. Single Element in a Sorted Array");
 					strs = cmdList.take().split(",");
 					nums = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
 					num = new Q540().singleNonDuplicate(nums);
 					System.out.println("return = " + num);
-					break;
-
-				case "567":
-					System.out.println("567. Permutation in String");
-					str1 = cmdList.take();
-					str2 = cmdList.take();
-					bol = new Q567().checkInclusion(str1, str2);
-					System.out.println("return = " + bol);
 					break;
 
 				case "733":
@@ -127,6 +133,18 @@ public class Leetcode {
 					numsArr[1] = new int[] { 1, 1, 0 };
 					numsArr[2] = new int[] { 1, 0, 1 };
 					numsArr = new Q733().floodFill(numsArr, num1, num2, num);
+					System.out.println("return = " + num);
+					break;
+
+				case "886":
+					System.out.println("886. Possible Bipartition");
+					num = Integer.valueOf(cmdList.take());
+					nums = Arrays.stream(cmdList.take().split(",")).mapToInt(Integer::parseInt).toArray();
+					numsArr = new int[3][];
+					numsArr[0] = new int[] { 1, 2 };
+					numsArr[1] = new int[] { 1, 3 };
+					numsArr[2] = new int[] { 2, 4 };
+					bol = new Q886().possibleBipartition(num, numsArr);
 					System.out.println("return = " + num);
 					break;
 
@@ -148,6 +166,15 @@ public class Leetcode {
 					num = new Q997().findJudge(num, numsArr);
 					System.out.println("return = " + num);
 					break;
+
+				case "1035":
+					System.out.println("1035. Uncrossed Lines");
+					nums1 = Arrays.stream(cmdList.take().split(",")).mapToInt(Integer::parseInt).toArray();
+					nums2 = Arrays.stream(cmdList.take().split(",")).mapToInt(Integer::parseInt).toArray();
+					num = new Q1035().maxUncrossedLines(nums1, nums2);
+					System.out.println("return = " + num);
+					break;
+
 				}
 			} catch (Exception e) {
 				System.out.println(e.fillInStackTrace());
