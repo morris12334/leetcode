@@ -60,7 +60,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Condiment\Soy.cs" />
     <Compile Include="Condiment\Whip.cs" />
+    <Compile Include="Size\Small.cs" />
+    <Compile Include="Size\Medium.cs" />
+    <Compile Include="Size\SizeDecorator.cs" />
+    <Compile Include="Size\Large.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
