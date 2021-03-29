@@ -26,5 +26,14 @@ namespace Ch3_Decorator
             return price + beverage.Cost();
         }
 
+        public double CostWithSize()
+        {
+            return price + beverage.CostWithSize();
+        }
+
+        public string GetDrink()
+        {
+            return string.Format("{0},{1}", beverage.GetDrink(), description);
+        }
     }
 }

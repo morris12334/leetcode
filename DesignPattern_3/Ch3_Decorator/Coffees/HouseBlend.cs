@@ -7,8 +7,10 @@ namespace Ch3_Decorator
 {
     public class HouseBlend : IBeverage
     {
+        private string size;
         private string description;
         private double price;
+        private double sizePrice;
 
         public HouseBlend()
         {
@@ -24,6 +26,15 @@ namespace Ch3_Decorator
         public double Cost()
         {
             return price;
+        }
+        public double CostWithSize()
+        {
+            return sizePrice + price;
+        }
+
+        public string GetDrink()
+        {
+            return string.Format("{0},{1}", size, description);
         }
     }
 }

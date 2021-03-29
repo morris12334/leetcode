@@ -9,6 +9,8 @@ namespace Ch3_Decorator
     public interface IBeverage
     {
         string GetDescription();
+        double CostWithSize();
+        string GetDrink();
         double Cost();
     }
 }

@@ -11,20 +11,30 @@ namespace Ch3_Decorator
         protected string description;
         protected double price;
         protected string size;
+        protected double sizePrice;
 
         protected SizeDecorator(IBeverage beverage)
         {
             this.beverage = beverage;
         }
-
         public string GetDescription()
         {
-            return string.Format("{0},{1}", size, beverage.GetDescription());
+            return beverage.GetDescription();
         }
 
         public double Cost()
         {
-            return price + beverage.Cost();
+            return beverage.Cost();
+        }
+
+        public double CostWithSize()
+        {
+            return sizePrice + beverage.Cost();
+        }
+
+        public string GetDrink()
+        {
+            return string.Format("{0},{1}", size, beverage.GetDescription());
         }
 
     }

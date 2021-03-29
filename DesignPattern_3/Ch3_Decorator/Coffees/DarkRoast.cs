@@ -7,8 +7,10 @@ namespace Ch3_Decorator
 {
     class DarkRoast : IBeverage
     {
+        private string size;
         private string description;
         private double price;
+        private double sizePrice;
 
         public DarkRoast()
         {
@@ -24,6 +26,16 @@ namespace Ch3_Decorator
         public double Cost()
         {
             return price;
+        }
+
+        public double CostWithSize()
+        {
+            return sizePrice + price;
+        }
+
+        public string GetDrink()
+        {
+            return string.Format("{0},{1}", size, description);
         }
     }
 }

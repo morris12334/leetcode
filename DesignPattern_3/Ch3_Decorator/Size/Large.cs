@@ -10,7 +10,7 @@ namespace Ch3_Decorator
         public Large(IBeverage beverage) : base(beverage)
         {
             this.size = "大杯";
-            this.price = .50;
+            this.sizePrice = .50;
         }
     }
 }
