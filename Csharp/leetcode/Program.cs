@@ -32,14 +32,16 @@ namespace leetcode
                     case "20"://https://leetcode.com/problems/valid-parentheses/description/
                         Console.WriteLine("20. Valid Parentheses");
                         str = Console.ReadLine();
-                        Console.WriteLine("return = " + leetcode.Q20(str));
+                        bol = new Q20().IsValid(str);
+                        Console.WriteLine("return = " + bol);
                         break;
 
                     case "53"://https://leetcode.com/problems/maximum-subarray/description/
                         Console.WriteLine("53. Maximum Subarray");
                         strs = Console.ReadLine().Split(',');
                         nums = Array.ConvertAll(strs, int.Parse);
-                        Console.WriteLine("return = " + leetcode.Q53(nums));
+                        num = new Q53().MaxSubArray(nums);
+                        Console.WriteLine("return = " + num);
                         break;
 
                     case "58"://https://leetcode.com/problems/length-of-last-word/description/
